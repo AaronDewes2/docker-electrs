@@ -9,7 +9,7 @@ WORKDIR /build
 RUN apt-get update
 RUN apt-get install -y git cargo clang cmake libsnappy-dev
 
-RUN git clone --branch $VERSION https://github.com/romanz/electrs .
+RUN git clone --branch $VERSION https://github.com/romanz/electrs . --depth=1
 
 RUN cargo build --release --verbose --bin electrs
 
