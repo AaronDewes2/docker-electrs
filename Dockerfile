@@ -11,7 +11,7 @@ RUN apt-get install -y git cargo clang cmake libsnappy-dev
 
 RUN git clone --branch $VERSION https://github.com/romanz/electrs .
 
-RUN cargo build --release --bin electrs
+RUN cargo build --release --verbose --bin electrs
 
 FROM debian:buster-slim
 
